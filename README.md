@@ -1,3 +1,4 @@
+<img src="https://cdn.rawgit.com/thewazir/peepchat_ui/master/images/peepstack.png" alt="peep stack banner"></img>
 # Peepchat
 
 This README outlines the details of collaborating on this Ember application.
