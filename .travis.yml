@@ -1,22 +1,23 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - npm install phantomjs-prebuilt
-
+- npm config set spin false
+- npm install -g bower
+- npm install phantomjs-prebuilt
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: BxyLyA4+1rF0eisEm+R9NHwRnlwULyxUeXrIJIiZXp+o/uxRa4kapoumJWtCNZ9VuOsYKqGMnxEzyi/45cDvrUCI1yXlsVSOSDUNSf7sC01Wmmy43qF6SE3eqxby04btKCjnH47MX/O1vOfb8fptqVLybt5g6GAMPyMgviI1/Mcl6FiW4dVbGbBYH3D1Weunn1Z/A3WGs3TeZbgNufwRj6TvOsEduM8fus6kXhwEzH2R9AORBjmXxxSGNvYYg8eeoh6fTV5AnJYn22l1SRt+FWvecXZThvcAkP6rG/UbNXRxS9eGDNiaHZhiaCxxRIBEUQA74z4xgitc8tRl6hS2kM19s9UhBJ0oZrYVtkUShoHmJFpSnL3K+Um7Xt5uSVjg5FhXkmSACn4s7dBRBRfLtW6ubiROrRxsDD5WBQuwS3ARouW9ui8G2XFMEENJJ4klexQ2j+LmnZ3eUkfT8IYagD4MoXRISd/7zR/PV1r/rjuh9xD/ZJU9QPOJporJsLhq4F85G4XShHMIprGX0k3eFlIVnZIIOEQKpZsqf4IUFriemESgwSAtnjxpnDlG7vCUnvaU5k88VQYP1BJac4U7WJ8vlK+F88+UetfMxnjPIUB7N+SdTZrNXauTRXb/Cnu1KsG/ncuxZtinYjvhkTb/vjAH2NxnkH3As0UmaCC343Q=
+  app: agile-sands-76252
+  on:
+    repo: thewazir/peepchat_ui
